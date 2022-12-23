@@ -14,8 +14,22 @@ const returnRandBase = () => {
   }
   
   const pAequorFactory = (specimenNum, dna) => {
-    return {specimenNum, dna}
+    return {
+      specimenNum, 
+      dna,
+      mutate() {
+        let baseIndex = Math.floor(Math.random() * this.dna.length);
+        this.dna[baseIndex] = returnRandBase();
+      }
+    }
   }
+  
+  const mocky1 = pAequorFactory(1, mockUpStrand());
+  console.log(mocky1);
+  mocky1.mutate();
+  console.log('-------');
+  
+  console.log(mocky1);
   
   
   
