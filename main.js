@@ -13,9 +13,9 @@ const returnRandBase = () => {
     return newStrand
   }
   
-  
-  
-  
+  const pAequorFactory = (specimenNum, dna) => {
+    return {specimenNum, dna}
+  }
   
   
   
