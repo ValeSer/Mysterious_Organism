@@ -22,7 +22,6 @@ const returnRandBase = () => {
         let newBase = returnRandBase();
         while (this.dna[baseIndex] === newBase) {
           newBase = returnRandBase();
-          console.log('inside');
         }
         this.dna[baseIndex] = newBase; 
       }
