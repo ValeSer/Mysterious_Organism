@@ -19,7 +19,12 @@ const returnRandBase = () => {
       dna,
       mutate() {
         let baseIndex = Math.floor(Math.random() * this.dna.length);
-        this.dna[baseIndex] = returnRandBase();
+        let newBase = returnRandBase();
+        while (this.dna[baseIndex] === newBase) {
+          newBase = returnRandBase();
+          console.log('inside');
+        }
+        this.dna[baseIndex] = newBase; 
       }
     }
   }
