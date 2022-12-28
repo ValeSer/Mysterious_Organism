@@ -37,13 +37,18 @@ const returnRandBase = () => {
     }
   }
   
-  const mocky1 = pAequorFactory(1, mockUpStrand());
-  console.log(mocky1);
-  mocky1.mutate();
-  console.log('-------');
-  
-  console.log(mocky1);
-  
+const mocky1 = pAequorFactory(1, mockUpStrand());
+console.log(mocky1);
+mocky1.mutate();
+console.log('-------');
+
+console.log(mocky1);
+console.log('-------');
+const mocky2 = pAequorFactory(2, mockUpStrand());
+console.log(mocky2);
+mocky1.compareDNA(mocky2);
+
+
   
   
   
