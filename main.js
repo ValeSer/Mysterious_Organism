@@ -24,6 +24,15 @@ const returnRandBase = () => {
           newBase = returnRandBase();
         }
         this.dna[baseIndex] = newBase; 
+      },
+      compareDNA (pAequor) {
+        let j = 0
+        for (let i=0; i < pAequor.dna.length; i++) {
+          if(this.dna[i] === pAequor.dna[i]) {
+            j++
+          }
+        }  let perc = Math.floor(j / pAequor.dna.length * 100);
+          console.log(`Specimen ${this.specimenNum} and ${pAequor.specimenNum} have ${perc}% DNA in common`)
       }
     }
   }
