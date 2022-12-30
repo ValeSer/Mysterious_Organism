@@ -56,3 +56,6 @@ const returnRandBase = () => {
     return survivors
   }
   console.log(survivorFactory(30));
+
+let survivors = survivorFactory(30);
+console.log(survivors);
