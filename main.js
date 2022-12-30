@@ -41,7 +41,7 @@ const returnRandBase = () => {
             j++;
         } 
         console.log(j);
-        return (j / this.dna ) >= 0.6;
+        return (j / this.dna.length ) >= 0.6;
       } 
     }
   }
