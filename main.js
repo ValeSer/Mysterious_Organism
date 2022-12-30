@@ -45,20 +45,14 @@ const returnRandBase = () => {
     }
   }
   
-  const mocky1 = pAequorFactory(1, mockUpStrand());
-  console.log(mocky1);
-  mocky1.mutate();
-  console.log('-------');
-  
-  console.log(mocky1);
-  console.log('-------');
-  const mocky2 = pAequorFactory(2, mockUpStrand());
-  console.log(mocky2);
-  mocky1.compareDNA(mocky1);
-  console.log(mocky1.willLikelySurvive());
-  const mocky3 = pAequorFactory(3, ['C','C','C','C','C','C','G','G','A','C','G','G','G','G','G','G']);
-  console.log(mocky3.willLikelySurvive());
-  console.log(mocky3.dna);
-  
-  
-  
+  const survivorFactory = instances => {
+    let survivors = []
+    while (survivors.length < instances) { 
+       let survivor = pAequorFactory(survivors.length, mockUpStrand());
+       if(survivor.willLikelySurvive) {
+         survivors.push(survivor);
+       }
+    }
+    return survivors
+  }
+  console.log(survivorFactory(30));
