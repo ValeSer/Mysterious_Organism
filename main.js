@@ -36,12 +36,11 @@ const returnRandBase = () => {
       },
       willLikelySurvive () {
         let j = 0;
-        for (let i=0; i < this.dna; i++) {
+        for (let i=0; i < this.dna.length; i++) {
           if(this.dna[i] === 'C' || this.dna[i] === 'G')
             j++;
         } 
-        console.log(j);
-        return (j / this.dna.length ) >= 0.6;
+        return (j / this.dna.length) >= 0.6;
       } 
     }
   }
